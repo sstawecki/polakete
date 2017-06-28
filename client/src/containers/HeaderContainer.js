@@ -7,7 +7,6 @@ import * as navMenuActions from '../actions/nav-menu-actions';
 
 class HeaderContainer extends Component {
   render() {
-    console.log('this',this);
     return (
       <AppBar
         className="header"

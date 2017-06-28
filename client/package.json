@@ -6,8 +6,8 @@
     "flow-bin": "^0.48.0",
     "react-scripts": "0.8.4"
   },
-  "engines" : {
-    "node" : ">=7.8"
+  "engines": {
+    "node": ">=8.0"
   },
   "dependencies": {
     "express": "^4.15.3",
@@ -19,7 +19,8 @@
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "react-tap-event-plugin": "^2.0.1",
-    "redux": "^3.0.0"
+    "redux": "^3.0.0",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

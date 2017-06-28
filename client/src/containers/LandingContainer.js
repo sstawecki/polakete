@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {Link} from 'react-router-dom';
+import RaisedButton from 'material-ui/RaisedButton';
 import * as headerActions from '../actions/header-actions';
+import * as callActions from '../actions/call-actions';
 
 class LandingContainer extends Component {
 
@@ -12,8 +13,8 @@ class LandingContainer extends Component {
 
   render() {
     return (
-      <div>
-        Landing. <Link to="/call">Go to call</Link>
+      <div className="content">
+        <RaisedButton label="Create" primary={true} onClick={this.props.actions.createSession}  />
       </div>
     );
   }
@@ -21,13 +22,13 @@ class LandingContainer extends Component {
 
 function mapStateToProps(state, props) {
   return {
-
+    call: state.call
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(Object.assign({},headerActions), dispatch)
+    actions: bindActionCreators(Object.assign({},headerActions, callActions), dispatch)
   }
 }
 
